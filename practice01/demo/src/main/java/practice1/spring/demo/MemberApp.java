@@ -1,9 +1,9 @@
-package hello.core.demo;
+package practice1.spring.demo;
 
-import hello.core.demo.Member.Grade;
-import hello.core.demo.Member.Member;
-import hello.core.demo.Member.MemberService;
-import hello.core.demo.Member.MemberServiceImpl;
+import practice1.spring.demo.Member.Grade;
+import practice1.spring.demo.Member.Member;
+import practice1.spring.demo.Member.MemberService;
+import practice1.spring.demo.Member.MemberServiceImpl;
 
 public class MemberApp {
     public static void main(String[] args) {

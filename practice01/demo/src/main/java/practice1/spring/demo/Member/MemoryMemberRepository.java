@@ -1,4 +1,4 @@
-package hello.core.demo.Member;
+package practice1.spring.demo.Member;
 
 import java.util.HashMap;
 import java.util.Map;
