@@ -56,3 +56,18 @@ member를 그대로 출력할 수 없으니 Member class의 getName함수를 이
 
 ## demo > src > test > java > practice1 > spring > demo > Member
 ### MemberServiceTest
+MemberServiceTest 클래스는 org.junit.jupiter.api.Test 애너테이션을 가지고 있습니다. 
+이 애너테이션은 JUnit 프레임워크에서 테스트 메서드임을 나타냅니다.
+MemberService 인터페이스를 구현한 MemberServiceImpl 클래스의 인스턴스인 memberService를 생성합니다. 
+이는 테스트할 대상인 MemberService의 구현체입니다.
+@Test 애너테이션이 적용된 join() 메서드가 정의되었습니다. 
+이 메서드는 Member 객체를 생성하고, 해당 멤버를 memberService.join()을 호출하여 회원 가입 처리합니다.
+Member 객체를 생성할 때, 1L이라는 아이디, "memberA"라는 이름, 그리고 Grade.VIP라는 등급을 가진 회원을 생성합니다. 
+이는 테스트를 위한 가정(Given)입니다.
+memberService.join(member)를 호출하여 회원을 가입시킵니다.
+memberService.findMember(1L)을 호출하여 아이디가 1L인 회원을 조회합니다. 
+이는 가입된 회원을 찾는 것을 검증하기 위한 테스트입니다.
+Assertions.assertThat(member).isEqualTo(findMember)를 사용하여 member 객체와 findMember 객체를 비교합니다. 
+이를 통해 회원 가입 후 회원을 정상적으로 찾았는지 검증합니다.
+위의 코드는 테스트를 위한 단위 테스트 메서드인 join()을 정의하고 있습니다. 
+이 메서드는 MemberService의 join()과 findMember() 메서드를 검증하여 회원 가입 및 조회 기능을 테스트하는 역할을 수행합니다.

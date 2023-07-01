@@ -3,7 +3,7 @@ package practice1.spring.demo.Member;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class MemberServiceTest {
+public class MemberServiceTest {
     MemberService memberService = new MemberServiceImpl();
 
     @Test
