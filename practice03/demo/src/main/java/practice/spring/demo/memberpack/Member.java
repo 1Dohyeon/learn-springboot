@@ -1,14 +1,14 @@
-package java.practice.demo.memberpack;
+package practice.spring.demo.memberpack;
 
 public class Member {
     private Long id;
     private String name;
-    private Grade grade;
+    private Coupon cp;
 
-    public Member(Long id, String name, Grade grade) {
+    public Member(Long id, String name, Coupon cp) {
         this.id = id;
         this.name = name;
-        this.grade = grade;
+        this.cp = cp;
     }
 
     public Long getId() {
@@ -27,11 +27,11 @@ public class Member {
         this.name = name;
     }
 
-    public Grade getGrade() {
-        return grade;
+    public Coupon getCoupon() {
+        return cp;
     }
 
-    public void setGrade(Grade grade) {
-        this.grade = grade;
+    public void setGrade(Coupon cp) {
+        this.cp = cp;
     }
 }
