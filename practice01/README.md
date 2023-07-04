@@ -152,3 +152,33 @@ memberId와 itemName, itemPrice를 파라미터로 받습니다.
 member와 파라미터로 받은 itemPrice를 통해서 discountPolicy의 discount 함수를 이용해서 1000원 OR 0원을 return 받으며, 그 값을 discoutnPrice 변수에 담습니다.
 
 그리고 이 함수는 함수 createOrder 함수는 최종적으로 memberId, itemName, itemPrice, discountPrice를 파라미터로 받는 Order 객체를 생성하고 반환합니다.
+
+# Spring Practice, Day 3
+
+## demo > src > main > java > practice1 > spring > demo > Member
+### class MemoryMemberRepository
+
+private final MemberRepository memberRepository = new MemoryMemberRepository();
+
+원래는 추상 interface에만 의존해야하는데, 위 코드를 보면 구체 클래스(MemoryMemberRepository)에도 의존하는 형태를 가지고 있는 특징을 볼 수 있습니다. -> DIP 위반
+
+private MemberRepository memberRepository;
+
+public MemberServiceImpl(MemberRepository memberRepository) {
+    this.memberRepository = memberRepository;
+}
+따라서 위 코드처럼 interface에만 의존하도록 객체를 생성해주고, 생성자를 통해서 의미를 부여합니다.
+
+나머지 파일들도 각 인터페이스에만 의존하도록 수정해줍니다.
+
+의미를 부여하게 될 class는 AppConfig 파일로, 아래의 위치에서 생서해줍니다.
+
+## demo > src > main > java > practice1 > spring > demo 
+
+### class AppConfig
+위 파일의 코드를 특징대로 각 인터페이스들에 어떠한 역할을 부여할 것인지에 대한 함수(memberRepository, discountPolicy)와
+클래스에 이 함수들을 연결해주는 함수(memberService, orderService)를 생성해줍니다.
+
+이런식으로 객체들을 나누게 된다면 기획안이 변경되어도 간단하게 코드를 수정할 수 있습니다.
+
+예를 들어 할인 정책을 변화하고 싶을 때는 discountPolicy 함수 내부만을 변경시키면 됩니다.
