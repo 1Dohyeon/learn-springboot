@@ -3,11 +3,12 @@ package practice1.spring.demo;
 import practice1.spring.demo.Member.Grade;
 import practice1.spring.demo.Member.Member;
 import practice1.spring.demo.Member.MemberService;
-import practice1.spring.demo.Member.MemberServiceImpl;
 
 public class MemberApp {
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        // MemberService memberService = new MemberServiceImpl(); 기존 테스트 코드
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 
