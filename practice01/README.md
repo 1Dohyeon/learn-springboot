@@ -171,7 +171,7 @@ public MemberServiceImpl(MemberRepository memberRepository) {
 
 나머지 파일들도 각 인터페이스에만 의존하도록 수정해줍니다.
 
-의미를 부여하게 될 class는 AppConfig 파일로, 아래의 위치에서 생서해줍니다.
+의미를 부여하게 될 class는 AppConfig 파일로, 아래의 위치에서 생성해줍니다.
 
 ## demo > src > main > java > practice1 > spring > demo 
 
