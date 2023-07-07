@@ -17,6 +17,7 @@ import practice1.spring.demo.Order.OrderServiceImpl;
 public class AppConfig {
     @Bean
     public MemberRepository memberRepository() {
+        System.out.println("call AppConfig.memberRepository()");
         return new MemoryMemberRepository();
     }
 
@@ -28,12 +29,21 @@ public class AppConfig {
 
     @Bean
     public MemberService memberService() {
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
     public OrderService orderService() {
+        System.out.println("call AppConfig.orderService()");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
+
+    // @Bean memberService -> new MemoryMemberRepository();
+    // @Bean orderService -> memberRepository() -> new MemoryMemberRepository();
+
+    // 싱글톤이 깨지는 거 아닐까? -> 테스트 해보자
+
+    // memberRepository가 3번 호출되어야하지만 싱글톤인 스프링 컨테이너는 한번만 호출하고 재사용함.
 
 }
