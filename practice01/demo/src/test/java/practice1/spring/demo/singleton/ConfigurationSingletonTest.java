@@ -31,4 +31,12 @@ public class ConfigurationSingletonTest {
         Assertions.assertThat(memberRepository2).isSameAs(memberRepository);
         // 세개 다 같다. 같은 instance가 공유되어있다.
     }
+
+    @Test
+    void configurationDeep() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppConfig bean = ac.getBean(AppConfig.class);
+
+        System.out.println("bean = " + bean.getClass());
+    }
 }
