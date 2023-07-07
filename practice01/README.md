@@ -182,3 +182,12 @@ public MemberServiceImpl(MemberRepository memberRepository) {
 이런식으로 객체들을 나누게 된다면 기획안이 변경되어도 간단하게 코드를 수정할 수 있습니다.
 
 예를 들어 할인 정책을 변화하고 싶을 때는 discountPolicy 함수 내부만을 변경시키면 됩니다.
+
+# Spring Practice, Day 4
+spring을 이용하였다. bean으로 appConfig에 있는 객체들을 저장하는 방법을 배웠다.
+
+# Spring Practice, Day 5
+bean에 저장되어 있는 객체들을 찾아내는 여러가지 방법에 대해서 배웠다.
+
+# Spring Practice, Day 6
+기본적인 싱글톤 패턴을 구현하는 방법을 배웠다.
