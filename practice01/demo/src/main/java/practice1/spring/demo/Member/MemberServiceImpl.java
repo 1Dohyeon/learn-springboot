@@ -1,5 +1,9 @@
 package practice1.spring.demo.Member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberServiceImpl implements MemberService {
 
     /*
@@ -11,6 +15,7 @@ public class MemberServiceImpl implements MemberService {
 
     // 생성자 -> MemberServiceImpl 타입의 필드 memberRepository만 이용. 즉 인터페이스에만 의존
     // 생성자 주입
+    @Autowired
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

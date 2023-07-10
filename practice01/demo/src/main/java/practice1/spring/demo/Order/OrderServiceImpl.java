@@ -1,5 +1,8 @@
 package practice1.spring.demo.Order;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import practice1.spring.demo.Discount.DiscountPolicy;
 import practice1.spring.demo.Discount.FixDiscountPolicy;
 import practice1.spring.demo.Discount.RateDiscountPolicy;
@@ -7,6 +10,7 @@ import practice1.spring.demo.Member.Member;
 import practice1.spring.demo.Member.MemberRepository;
 import practice1.spring.demo.Member.MemoryMemberRepository;
 
+@Component
 public class OrderServiceImpl implements OrderService {
     // private final MemberRepository memberRepository = new
     // MemoryMemberRepository(); day1,2 코드
@@ -25,6 +29,7 @@ public class OrderServiceImpl implements OrderService {
     private DiscountPolicy discountPolicy;
 
     // 생성자
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
