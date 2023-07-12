@@ -1,6 +1,7 @@
 package spring.practice.demo.member;
 
 public class Member {
+    // Id, password, name을 통해서 객체 생성
     private String id;
     private String password;
     private String name;
