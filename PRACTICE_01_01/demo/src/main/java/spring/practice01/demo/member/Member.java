@@ -5,6 +5,24 @@ public class Member {
     private String id;
     private String password;
     private String name;
+    private boolean haveCard = false;
+    private boolean inMemory = false;
+
+    public boolean isInMemory() {
+        return inMemory;
+    }
+
+    public void setInMemory(boolean inMemory) {
+        this.inMemory = inMemory;
+    }
+
+    public boolean getHaveCard() {
+        return haveCard;
+    }
+
+    public void setHaveCard(boolean haveCard) {
+        this.haveCard = haveCard;
+    }
 
     public String getId() {
         return id;
