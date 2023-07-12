@@ -12,6 +12,7 @@ public class MemoryMemberImpl implements MemoryMember {
         return store;
     }
 
+    // Map에 member를 저장하는 메소드
     @Override
     public void save(Member member) {
         if (store.containsKey(member.getId())) {
@@ -23,6 +24,7 @@ public class MemoryMemberImpl implements MemoryMember {
         }
     }
 
+    // 저장된 메소드를 조회하는 메소드
     @Override
     public Member findById(String id) {
         if (store.containsKey(id)) {

@@ -36,6 +36,7 @@ public class Card {
         this.point = (int) (point + point * 0.01);
     }
 
+    // 카드에 값을 추가하는 메소드
     public void chargeCard(int point) {
         if (point >= 100) {
             this.point = (int) (point + point * 0.01);

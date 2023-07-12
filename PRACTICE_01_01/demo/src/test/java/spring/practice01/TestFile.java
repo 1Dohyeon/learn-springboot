@@ -1,4 +1,4 @@
-package spring.practice01.demo.cardTest;
+package spring.practice01;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -10,20 +10,30 @@ import spring.practice01.demo.member.Member;
 import spring.practice01.demo.member.MemoryMember;
 import spring.practice01.demo.member.MemoryMemberImpl;
 
-public class CardTest {
+public class TestFile {
+
     @Test
-    void testing() {
+    void memberTest() {
         MemoryMember memoryMember = new MemoryMemberImpl();
-        CardService cardService = new CardServiceImpl();
 
         Member member = new Member("abc123", "qwer1234", "Kim");
         memoryMember.save(member);
         Member findMember = memoryMember.findById("abc123");
 
-        Card card = cardService.createCard(member, "KIMCARD", 1000);
-
         Assertions.assertThat(member).isEqualTo(findMember);
+    }
+
+    @Test
+    void cardTest() {
+        MemoryMember memoryMember = new MemoryMemberImpl();
+        CardService cardService = new CardServiceImpl();
+
+        Member member = new Member("xyz123", "qwer1234", "Park");
+        memoryMember.save(member);
+
+        Card card = cardService.createCard(member, "PARKCARD", 1000);
+
         Assertions.assertThat(card.getPoint()).isEqualTo((int) (1000 + 1000 * 0.01));
-        Assertions.assertThat(cardService.findCardNameById("abc123")).isEqualTo("KIMCARD");
+        Assertions.assertThat(cardService.findCardNameById("xyz123")).isEqualTo("PARKCARD");
     }
 }
