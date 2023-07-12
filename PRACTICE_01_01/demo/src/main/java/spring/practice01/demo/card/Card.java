@@ -1,9 +1,10 @@
 package spring.practice01.demo.card;
 
+// 카드 정보
 public class Card {
-    private String cardName;
-    private int point;
-    private boolean inCardMemory = false;
+    private String cardName; // 카드 이름
+    private int point; // 카드 포인트
+    private boolean inCardMemory = false; // 카드가 메모리에 들어있는지의 여부
 
     public boolean getInCardMemory() {
         return inCardMemory;

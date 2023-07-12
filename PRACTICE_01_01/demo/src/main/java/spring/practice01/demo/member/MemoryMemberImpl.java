@@ -6,6 +6,12 @@ import java.util.Map;
 public class MemoryMemberImpl implements MemoryMember {
     private static Map<String, Member> store = new HashMap<>();
 
+    // 저장된 메모리를 반환하는 메소드
+    @Override
+    public Map<String, Member> getMemoryMember() {
+        return store;
+    }
+
     @Override
     public void save(Member member) {
         if (store.containsKey(member.getId())) {
