@@ -1,4 +1,4 @@
-package spring.practice.demo.member;
+package spring.practice01.demo.member;
 
 public interface MemoryMember {
     void save(Member member);

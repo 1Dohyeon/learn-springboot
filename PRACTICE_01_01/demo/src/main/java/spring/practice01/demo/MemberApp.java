@@ -1,8 +1,8 @@
-package spring.practice.demo;
+package spring.practice01.demo;
 
-import spring.practice.demo.member.Member;
-import spring.practice.demo.member.MemoryMember;
-import spring.practice.demo.member.MemoryMemberImpl;
+import spring.practice01.demo.member.Member;
+import spring.practice01.demo.member.MemoryMember;
+import spring.practice01.demo.member.MemoryMemberImpl;
 
 public class MemberApp {
     public static void main(String[] args) {
