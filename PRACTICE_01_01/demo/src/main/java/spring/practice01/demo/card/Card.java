@@ -3,6 +3,15 @@ package spring.practice01.demo.card;
 public class Card {
     private String cardName;
     private int point;
+    private boolean inCardMemory = false;
+
+    public boolean getInCardMemory() {
+        return inCardMemory;
+    }
+
+    public void setInCardMemory(boolean inCardMemory) {
+        this.inCardMemory = inCardMemory;
+    }
 
     public String getCardName() {
         return cardName;
@@ -23,7 +32,7 @@ public class Card {
     // 생성자
     public Card(String cardName, int point) {
         this.cardName = cardName;
-        this.point = point;
+        this.point = (int) (point + point * 0.01);
     }
 
     public void chargeCard(int point) {
