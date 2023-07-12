@@ -1,17 +1,8 @@
 package spring.practice01.demo.card;
 
 public class Card {
-    private int cardNumber;
     private String cardName;
     private int point;
-
-    public int getCardNumber() {
-        return cardNumber;
-    }
-
-    public void setCardNumber(int cardNumber) {
-        this.cardNumber = cardNumber;
-    }
 
     public String getCardName() {
         return cardName;
@@ -30,8 +21,7 @@ public class Card {
     }
 
     // 생성자
-    public Card(int cardNumber, String cardName, int point) {
-        this.cardNumber = cardNumber;
+    public Card(String cardName, int point) {
         this.cardName = cardName;
         this.point = point;
     }

@@ -7,8 +7,17 @@ public class Member {
     private String name;
     private boolean haveCard = false;
     private boolean inMemory = false;
+    private String yourCardName = "";
 
-    public boolean isInMemory() {
+    public String getYourCardName() {
+        return yourCardName;
+    }
+
+    public void setYourCardName(String yourCardName) {
+        this.yourCardName = yourCardName;
+    }
+
+    public boolean getInMemory() {
         return inMemory;
     }
 
