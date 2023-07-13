@@ -2,15 +2,14 @@ package spring.practice01.demo;
 
 import spring.practice01.demo.card.Card;
 import spring.practice01.demo.card.CardService;
-import spring.practice01.demo.card.CardServiceImpl;
 import spring.practice01.demo.member.Member;
 import spring.practice01.demo.member.MemoryMember;
-import spring.practice01.demo.member.MemoryMemberImpl;
 
 public class CardApp2 {
     public static void main(String[] args) {
-        MemoryMember memoryMember = new MemoryMemberImpl();
-        CardService cardService = new CardServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemoryMember memoryMember = appConfig.memoryMember();
+        CardService cardService = appConfig.cardService();
 
         Member member1 = new Member("abc123", "qwer1234", "Kim");
         Member member2 = new Member("xyz123", "qwer1234", "Park");

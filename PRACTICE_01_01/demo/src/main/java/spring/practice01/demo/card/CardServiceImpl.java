@@ -5,13 +5,17 @@ import java.util.Map;
 
 import spring.practice01.demo.member.Member;
 import spring.practice01.demo.member.MemoryMember;
-import spring.practice01.demo.member.MemoryMemberImpl;
 
 public class CardServiceImpl implements CardService {
 
     private static Map<String, String> membersCard = new HashMap<>();
-    CardMemory cardMemory = new CardMemoryImpl();
-    MemoryMember memoryMember = new MemoryMemberImpl();
+    private final CardMemory cardMemory;
+    private final MemoryMember memoryMember;
+
+    public CardServiceImpl(CardMemory cardMemory, MemoryMember memoryMember) {
+        this.cardMemory = cardMemory;
+        this.memoryMember = memoryMember;
+    }
 
     // 카드 정보 저장 메소드
     @Override
