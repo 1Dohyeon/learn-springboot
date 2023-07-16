@@ -15,8 +15,8 @@ public class AppConfig {
     @Bean
     public CardService cardService() {
         return new CardServiceImpl(
-                new CardMemoryImpl(),
-                new MemoryMemberImpl());
+                cardMemory(),
+                memoryMember());
     }
 
     @Bean
