@@ -3,6 +3,9 @@ package spring.practice01.demo.member;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemoryMemberImpl implements MemoryMember {
     private static Map<String, Member> store = new HashMap<>();
 

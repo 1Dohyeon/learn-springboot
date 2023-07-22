@@ -3,15 +3,22 @@ package spring.practice01.demo.card;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import spring.practice01.demo.member.Member;
 import spring.practice01.demo.member.MemoryMember;
 
+// AutoAppConfig 에서 ComponantScan은 Componant를 스캔해서 스프링 빈으로 등록하므로, Component를 붙여줌.
+@Component
 public class CardServiceImpl implements CardService {
 
     private static Map<String, String> membersCard = new HashMap<>();
     private final CardMemory cardMemory;
     private final MemoryMember memoryMember;
 
+    // @Autowired 는 의존관계를 자동으로 주입해줌.
+    @Autowired
     public CardServiceImpl(CardMemory cardMemory, MemoryMember memoryMember) {
         this.cardMemory = cardMemory;
         this.memoryMember = memoryMember;

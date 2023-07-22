@@ -3,7 +3,10 @@ package spring.practice01.demo.card;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
 // 카드 name을 key로 card 필드를 value로 데이터를 저장하는 메소드
+@Component
 public class CardMemoryImpl implements CardMemory {
     private static Map<String, Card> cardStore = new HashMap<>();
 
