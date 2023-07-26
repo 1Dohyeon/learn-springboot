@@ -60,11 +60,11 @@
 어떠한 메소드가 있을 때, 주입할 스프링 빈 없이 동작해야될 경우가 있습니다.
 이때 @Autowired만 사용하면 주입 대상이 없을 경우 오류가 발생합니다. 
 아래 방법을 이용하여 자동 주입 대상을 옵션으로 처리할 수 있습니다.
-    - @Autowired(required=false) : 자동 주입할 대상이 없으면 수정자 메서드 자체가 호출 안됨
-    - org.springframework.lang.@Nullable : 자동 주입할 대상이 없으면 null이 입력된다.
-    - Optional<> : 자동 주입할 대상이 없으면 Optional.empty 가 입력된다.
+- @Autowired(required=false) : 자동 주입할 대상이 없으면 수정자 메서드 자체가 호출 안됨
+- org.springframework.lang.@Nullable : 자동 주입할 대상이 없으면 null이 입력된다.
+- Optional<> : 자동 주입할 대상이 없으면 Optional.empty 가 입력된다.
 
-3. 롬복
+### 3. 롬복
 
 생성자 주입을 필드 주입처럼 간단하게 만들 수 있게 하는 라이브러리가 롬복입니다.
 라이브러리를 적용하고 @RequiredArgsConstructor 를 이용하여 코드를 깔끔하게 사용할 수 있습니다.
