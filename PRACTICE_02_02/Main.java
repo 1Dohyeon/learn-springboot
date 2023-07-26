@@ -1,3 +1,8 @@
+import person.Person;
+import surgery.EyesSurgery;
+import surgery.NoseSurgery;
+import surgery.Surgery;
+
 public class Main {
     public static void main(String[] args) {
         Person 짱구 = new Person("유쌍", "직선 코", "큰입");

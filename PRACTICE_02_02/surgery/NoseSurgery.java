@@ -1,3 +1,7 @@
+package surgery;
+
+import person.Person;
+
 public class NoseSurgery implements Surgery {
 
     @Override

@@ -1,3 +1,5 @@
+package person;
+
 public class Person {
     private String eyes; // 눈
     private String nose; // 코
