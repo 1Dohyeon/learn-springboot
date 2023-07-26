@@ -88,3 +88,55 @@
 @Qualifier의 문제점으로는 컴파일시에 타입 체크가 안된다는 점입니다.
 이럴 때 애노테이션을 만들어서 문제를 해결할 수 있습니다.
 애노테이션을 작성하고 나서는 @Qualifier("name")이 아닌 @Name으로 재정의시킬 수 있습니다.
+
+### 3. 조회한 빈이 모두 필요한 경우
+예를 들어 두개의 클래스로 구체화된 인터페이스에서 클라이언트가 클래스를 선택할 수 있다고 가정한다면, 해당 타입의 스프링 빈이 다 필요할 경우가 생길 수도 있다.
+이런 경우 스프링을 사용하여 전략 패턴을 매우 간단하게 구현할 수 있다.
+
+아래 예제는 Map과 List에 스프링 빈을 담는 코드 예제이다.
+```
+static class DiscountService {
+        private final Map<String, DiscountPolicy> policyMap;
+        private final List<DiscountPolicy> policies;
+
+        public DiscountService(Map<String, DiscountPolicy> policyMap,
+                List<DiscountPolicy> policies) {
+            this.policyMap = policyMap;
+            this.policies = policies;
+            System.out.println("policyMap = " + policyMap);
+            System.out.println("policies = " + policies);
+        }
+
+        public int discount(Member member, int price, String discountCode) {
+            DiscountPolicy discountPolicy = policyMap.get(discountCode);
+            System.out.println("discountCode = " + discountCode);
+            System.out.println("discountPolicy = " + discountPolicy);
+            return discountPolicy.discount(member, price);
+        }
+    }
+```
+
+1. 로직 분석
+    DiscountService는 Map으로 모든 DiscountPolicy 를 주입받는다. 
+    이때 fixDiscountPolicy, rateDiscountPolicy 가 주입된다.
+    discount() 메서드는 discountCode로 "fixDiscountPolicy"가 넘어오면 map에서 fixDiscountPolicy 스프링 빈을 찾아서 실행한다. 
+    물론 “rateDiscountPolicy”가 넘어오면 rateDiscountPolicy 스프링 빈을 찾아서 실행한다.
+
+2. 주입 분석
+    Map<String, DiscountPolicy> : map의 키에 스프링 빈의 이름을 넣어주고, 그 값으로
+    DiscountPolicy 타입으로 조회한 모든 스프링 빈을 담아준다.
+    List<DiscountPolicy> : DiscountPolicy 타입으로 조회한 모든 스프링 빈을 담아준다.
+    만약 해당하는 타입의 스프링 빈이 없으면, 빈 컬렉션이나 Map을 주입한다
+
+```
+new AnnotationConfigApplicationContext(AutoAppConfig.class,DiscountService.class);
+```
+
+위 예제 코드처럼 스프링 빈을 선택하면서 AutoAppConfig.class , DiscountService.class 를 파라미터로 넘겨 해당 클래스를 자동으로 스
+프링 빈으로 등록 할 수 있다.
+
+**
+편리한 자동 기능을 기본으로 사용하자!
+직접 등록하는 기술 지원 객체는 수동 등록, 다형성을 적극 활용하는 비즈니스 로직은 수동 등록을 고민해보자!
+스프링 부트가 아니라 내가 직접 기술 지원 객체를 스프링 빈으로 등록한다면 수동으로 등록해서 명확하게 드러내는 것이 좋다.
+**
