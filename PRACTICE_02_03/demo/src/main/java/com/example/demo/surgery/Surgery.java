@@ -1,6 +1,6 @@
-package surgery;
+package com.example.demo.surgery;
 
-import person.Person;
+import com.example.demo.person.Person;
 
 public interface Surgery {
     void plasticSurgery(Person person);

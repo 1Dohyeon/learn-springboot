@@ -1,7 +1,7 @@
-package surgery;
+package com.example.demo.surgery;
 
-import memory.Memory;
-import person.Person;
+import com.example.demo.memory.Memory;
+import com.example.demo.person.Person;
 
 public class EyesSurgery implements Surgery {
 

@@ -1,4 +1,4 @@
-package person;
+package com.example.demo.person;
 
 public class Person {
     private String eyes; // 눈

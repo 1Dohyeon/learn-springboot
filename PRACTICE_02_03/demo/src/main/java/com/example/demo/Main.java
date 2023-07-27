@@ -1,5 +1,7 @@
-import person.Person;
-import surgery.Surgery;
+package com.example.demo;
+
+import com.example.demo.person.Person;
+import com.example.demo.surgery.Surgery;
 
 public class Main {
     public static void main(String[] args) {
