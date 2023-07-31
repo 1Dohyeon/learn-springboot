@@ -5,11 +5,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-public class BeanLifeCycleTest {
+public class CallBackTest {
     @Test
-    public void lifeCycleTest() {
+    public void callBackTest() {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(LifeCycleConfig.class);
-        CallBack client = ac.getBean(CallBack.class);
+        CallBack callBack = ac.getBean(CallBack.class);
         ac.close(); //스프링 컨테이너를 종료, ConfigurableApplicationContext 필요
     }
     @Configuration

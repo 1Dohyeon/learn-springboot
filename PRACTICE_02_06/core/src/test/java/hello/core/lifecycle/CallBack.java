@@ -1,24 +1,39 @@
 package hello.core.lifecycle;
 
-public class NetworkClient {
-    private String url;
-    public NetworkClient() {
-        System.out.println("생성자 호출, url = " + url);
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
+public class CallBack {
+    private String id;
+    public CallBack() {
+        System.out.println("생성자 호출, id = " + id);
         connect();
-        call("초기화 연결 메시지");
+        call();
     }
-    public void setUrl(String url) {
-        this.url = url;
+    public void setId(String id) {
+        this.id = id;
     }
     //서비스 시작시 호출
     public void connect() {
-        System.out.println("connect: " + url);
+        System.out.println("connect: " + id);
     }
-    public void call(String message) {
-        System.out.println("call: " + url + " message = " + message);
+    public void call() {
+        System.out.println("call: " + id);
     }
     //서비스 종료시 호출
-    public void disconnect() {
-        System.out.println("close: " + url);
+    public void disConnect() {
+        System.out.println("close: " + id);
+    }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("NetworkClient.init");
+        connect();
+        call();
+    }
+    @PreDestroy
+    public void close() {
+        System.out.println("NetworkClient.close");
+        disConnect();
     }
 }

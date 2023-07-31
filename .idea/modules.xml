@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Study-spring.iml" filepath="$PROJECT_DIR$/.idea/Study-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/lesson_01_02_scope부터.iml" filepath="$PROJECT_DIR$/.idea/lesson_01_02_scope부터.iml" />
     </modules>
   </component>
 </project>
