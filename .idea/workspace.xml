@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7378949d-b41d-4914-9d33-1d3088322208" name="Changes" comment="" />
+    <list default="true" id="7378949d-b41d-4914-9d33-1d3088322208" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/sql/ddl.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/controller/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/controller/MemberForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/domain/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/repository/MemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/repository/MemoryMemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/service/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/resources/templates/hello-templete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/resources/templates/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/resources/templates/members/createMemberForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/resources/templates/members/memberList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/test/java/hello/hellospring/repository/MemoryMemberRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/test/java/hello/hellospring/service/MemberServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +37,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2TL7A1iqsVR7PLF38h0IAGzeNff" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +52,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/dh107/OneDrive/바탕 화면/폴더/working/WorkSpace/02_study/Study-spring/PRACTICE_02_06",
+    "last_opened_file_path": "C:/Users/dh107/OneDrive/바탕 화면/폴더/working/WorkSpace/02_study/Study-spring",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +69,9 @@
       <option name="presentableId" value="Default" />
       <updated>1690810361325</updated>
       <workItem from="1690810366477" duration="630000" />
+      <workItem from="1690859070591" duration="504000" />
+      <workItem from="1690860164168" duration="80000" />
+      <workItem from="1691058350991" duration="1308000" />
     </task>
     <servers />
   </component>
