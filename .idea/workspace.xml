@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7378949d-b41d-4914-9d33-1d3088322208" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/sql/ddl.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/SpringConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/controller/HelloController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lesson_02_01/hello-spring/src/main/java/hello/hellospring/controller/HomeController.java" afterDir="false" />
@@ -52,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/dh107/OneDrive/바탕 화면/폴더/working/WorkSpace/02_study/Study-spring",
+    "last_opened_file_path": "C:/Users/dh107/OneDrive/바탕 화면/폴더/working/WorkSpace/02_study/Study-spring/lesson_03_01/servlet/build.gradle",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,6 +71,7 @@
       <workItem from="1690859070591" duration="504000" />
       <workItem from="1690860164168" duration="80000" />
       <workItem from="1691058350991" duration="1308000" />
+      <workItem from="1691063672435" duration="418000" />
     </task>
     <servers />
   </component>
