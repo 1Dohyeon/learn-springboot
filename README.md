@@ -1,6 +1,5 @@
 # Spring Boot
-스프링을 공부하는 과정을 기록하는 저장소입니다. <br/>
-This repository that records the process of studying springs.
+
 
 ------------------------------
 
